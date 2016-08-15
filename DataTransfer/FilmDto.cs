@@ -19,5 +19,10 @@ namespace DataTransfer
                 return Name;
             }
         }
+
+        protected override bool IsDirty()
+        {
+            return Status == Status.Dirty;
+        }
     }
 }
