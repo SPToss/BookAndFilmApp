@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataTransfer
 {
-    public enum Status : byte
+    public enum  FilmSoundTrack
     {
-        New = 0,
-        Saved = 1,
-        Dirty = 2,
+        Dubbing = 0,
+        Lector = 1,
+        Subtitles = 2,
+        Oryginal = 4
     }
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataTransfer
+namespace Domain.Objects.Abstracts
 {
-    public class DataItemBase
+    public abstract class DataItemBase
     {
-        public Status Status { get; private set; }
+        protected Status Status { get; private set; }
 
         protected T SetValue<T>(T t)
         {
@@ -19,5 +19,7 @@ namespace DataTransfer
             Status = Status.Dirty;
             return t;
         }
+
+        protected abstract bool IsDirty();
     }
 }

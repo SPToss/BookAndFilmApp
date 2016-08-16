@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataTransfer
+namespace Domain.Objects
 {
-    public abstract class ListBase
+    public enum Status : byte
     {
-        public abstract bool IsDirty();
+        New = 0,
+        Saved = 1,
+        Dirty = 2,
     }
 }

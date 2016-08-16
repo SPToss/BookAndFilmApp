@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistentoDelProyecto", "AsistentoDelProyecto\AsistentoDelProyecto.csproj", "{FBF7F436-064C-4BF7-883E-23CB6E2C9F72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransfer", "DataTransfer\DataTransfer.csproj", "{3153EE82-E8AD-4D3A-9D0B-5484B3B0F6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{D25769CC-2BF3-4490-AA41-3A390DA28267}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FBF7F436-064C-4BF7-883E-23CB6E2C9F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBF7F436-064C-4BF7-883E-23CB6E2C9F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBF7F436-064C-4BF7-883E-23CB6E2C9F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3153EE82-E8AD-4D3A-9D0B-5484B3B0F6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3153EE82-E8AD-4D3A-9D0B-5484B3B0F6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3153EE82-E8AD-4D3A-9D0B-5484B3B0F6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3153EE82-E8AD-4D3A-9D0B-5484B3B0F6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25769CC-2BF3-4490-AA41-3A390DA28267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25769CC-2BF3-4490-AA41-3A390DA28267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25769CC-2BF3-4490-AA41-3A390DA28267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25769CC-2BF3-4490-AA41-3A390DA28267}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
