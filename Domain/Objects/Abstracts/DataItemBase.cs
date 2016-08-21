@@ -12,10 +12,6 @@ namespace Domain.Objects.Abstracts
 
         protected T SetValue<T>(T t)
         {
-            if (Status == Status.Dirty)
-            {
-                return t;
-            }
             Status = Status.Dirty;
             return t;
         }
