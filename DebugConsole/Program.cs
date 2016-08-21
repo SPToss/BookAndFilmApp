@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Objects
+namespace DebugConsole
 {
-    public enum Status : byte
+    class Program
     {
-        New = 0,
-        Saved = 1,
-        Dirty = 2,
-        Deleted = 3,
+        static void Main(string[] args)
+        {
+        }
     }
 }

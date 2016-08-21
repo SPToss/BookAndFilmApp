@@ -8,7 +8,7 @@ namespace Domain.Objects.Abstracts
 {
     public abstract class DataItemBase
     {
-        protected Status Status { get; private set; }
+        public Status Status { get; private set; }
 
         protected T SetValue<T>(T t)
         {
