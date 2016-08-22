@@ -11,7 +11,7 @@ namespace UnitTest.DomainTest
         {
             Film film = new Film();
 
-            Assert.That(film.Status.Equals(Status.New));
+            Assert.That(film.Status == Status.Clean);
         }
         [Test]
         public void NewNotEmptyObjectShouldHaveNewFlag()
@@ -23,7 +23,20 @@ namespace UnitTest.DomainTest
                 Genres = "Test",
                 ProductionCompany = "Test"
             };
-            Assert.That(film.Status.Equals(Status.New));
+            Assert.That(film.Status == Status.Clean);
         }
+
+       [Test]
+       public void AfterChangePropertyObjectShouldBeDirty()
+        {
+            Film film = new Film();
+
+            film.Title = "Test Title";
+
+            film.Title = "New Title 1";
+
+            Assert.That(film.IsDirty);
+        }
+
     }
 }

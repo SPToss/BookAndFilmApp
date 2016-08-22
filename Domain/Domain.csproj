@@ -44,6 +44,7 @@
     <Compile Include="Objects\Abstracts\DataItemBase.cs" />
     <Compile Include="Objects\Abstracts\ListBase.cs" />
     <Compile Include="Objects\Film.cs" />
+    <Compile Include="Objects\FilmList.cs" />
     <Compile Include="Objects\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

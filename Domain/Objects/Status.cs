@@ -12,5 +12,7 @@ namespace Domain.Objects
         Saved = 1,
         Dirty = 2,
         Deleted = 3,
+        NewAndDeleted = 4,
+        Clean = 5
     }
 }

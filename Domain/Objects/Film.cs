@@ -7,16 +7,61 @@ namespace Domain.Objects
 {
     public class Film : DataItemBase
     {
-        public string Title { get { return Title; } set { Title = SetValue(value); } }
-        public string Distribution { get { return Distribution; } set { Distribution = SetValue(value); } }
-        public string ProductionCompany { get { return ProductionCompany; } set { ProductionCompany = SetValue(value); } }
-        public string Type { get { return Type; } set { Type = SetValue(value); } }
-        public string Genres { get { return Genres; } set { Genres = SetValue(value); } }
-        public string ReliseYear { get { return ReliseYear; } set { ReliseYear = SetValue(value); } }
-        public FilmStatus FilmStatus { get { return FilmStatus; } set { FilmStatus = SetValue(value); } }
-        public FilmSoundTrack SoundTrack { get { return SoundTrack; } set { SoundTrack = SetValue(value); } }
+        private string _title;
+        public string Title
+        {
+            get { return _title; }
+            set { SetValue(ref _title,value); }
+        }
 
+        private string _distribution;
+        public string Distribution
+        {
+            get { return _distribution; }
+            set {SetValue(ref _distribution, value); }
+        }
 
+        private string _productionCompany;
+        public string ProductionCompany
+        {
+            get { return _productionCompany; }
+            set { SetValue(ref _productionCompany, value); }
+        }
+
+        private string _type;
+        public string Type
+        {
+            get { return _title; }
+            set {SetValue(ref _type, value); }
+        }
+
+        private string _geners;
+        public string Genres
+        {
+            get { return _geners; }
+            set {SetValue(ref _geners, value); }
+        }
+
+        private string _reliseYear;
+        public string ReliseYear
+        {
+            get { return _reliseYear; }
+            set {SetValue(ref _reliseYear, value); }
+        }
+
+        private FilmStatus _filmStatus;
+        public FilmStatus FilmStatus
+        {
+            get { return _filmStatus; }
+            set {SetValue(ref _filmStatus, value); }
+        }
+
+        private FilmSoundTrack _soundTrack;
+        public FilmSoundTrack SoundTrack
+        {
+            get { return _soundTrack; }
+            set {SetValue(ref _soundTrack, value); }
+        }
 
 
         public static Film FromDto(FilmDto film)
@@ -32,9 +77,15 @@ namespace Domain.Objects
                 ProductionCompany = film.ProductionCompany,
             };
         }
-        protected override bool IsDirty()
+
+        public override string ToString()
         {
-            if(Status == Status.Dirty || Status == Status.Deleted)
+            return $"{Title} ({ReliseYear}) by : {Distribution}";
+        }
+
+        public override bool IsDirty()
+        {
+            if (Status == Status.Dirty || Status == Status.Deleted)
             {
                 return true;
             }
