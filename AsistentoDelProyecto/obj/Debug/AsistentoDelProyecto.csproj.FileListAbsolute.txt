@@ -31,4 +31,3 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.csproj.GenerateResource.Cache
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.exe
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.pdb
-C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.csprojResolveAssemblyReference.cache

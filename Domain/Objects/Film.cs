@@ -2,7 +2,6 @@
 using Domain.Objects.Abstracts;
 using System;
 
-
 namespace Domain.Objects
 {
     public class Film : DataItemBase
@@ -75,6 +74,7 @@ namespace Domain.Objects
                 Genres = film.Genres,
                 ReliseYear = film.ReliseYear,
                 ProductionCompany = film.ProductionCompany,
+                Type = film.Type
             };
         }
 
@@ -90,6 +90,24 @@ namespace Domain.Objects
                 return true;
             }
             return false;
+        }
+
+        public override int GetHashCode()
+        {
+            int result = (Title != null ? Title.GetHashCode() : 0);
+            result = (result * 397) ^ (Distribution != null ? Distribution.GetHashCode() : 0);
+            result = (result * 397) ^ (FilmStatus.GetHashCode());
+            result = (result * 397) ^ (SoundTrack.GetHashCode());
+            result = (result * 397) ^ (Genres != null ? Genres.GetHashCode() : 0);
+            result = (result * 397) ^ (ReliseYear != null ? ReliseYear.GetHashCode() : 0);
+            result = (result * 397) ^ (ProductionCompany != null ? ProductionCompany.GetHashCode() : 0);
+            result = (result * 397) ^ (Type != null ? Type.GetHashCode() : 0);
+            return result;
+        }
+
+        public bool CompareTo(Film obj)
+        {
+            return this.GetHashCode() == obj.GetHashCode();
         }
     }
 }

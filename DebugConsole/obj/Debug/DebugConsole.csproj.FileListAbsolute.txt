@@ -3,4 +3,3 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\bin\Debug\DebugConsole.pdb
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\obj\Debug\DebugConsole.exe
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\obj\Debug\DebugConsole.pdb
-C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\obj\Debug\DebugConsole.csprojResolveAssemblyReference.cache
