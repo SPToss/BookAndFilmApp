@@ -105,9 +105,19 @@ namespace Domain.Objects
             return result;
         }
 
-        public bool CompareTo(Film obj)
+        public static bool operator ==(Film left, Film right)
         {
-            return this.GetHashCode() == obj.GetHashCode();
+            return left.GetHashCode() == right.GetHashCode();
+        }
+
+        public static bool operator !=(Film left, Film right)
+        {
+            return left.GetHashCode() != right.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
         }
     }
 }
