@@ -9,3 +9,5 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\UnitTest\bin\Debug\log4net.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\UnitTest\bin\Debug\log4net.xml

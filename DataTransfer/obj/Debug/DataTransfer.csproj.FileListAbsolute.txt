@@ -2,3 +2,5 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataTransfer\bin\Debug\DataTransfer.pdb
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataTransfer\obj\Debug\DataTransfer.dll
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataTransfer\obj\Debug\DataTransfer.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataTransfer\bin\Debug\log4net.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataTransfer\bin\Debug\log4net.xml

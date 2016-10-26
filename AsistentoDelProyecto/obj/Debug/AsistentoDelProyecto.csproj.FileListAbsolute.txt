@@ -32,3 +32,5 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.exe
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.pdb
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.csprojResolveAssemblyReference.cache
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\log4net.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\log4net.xml

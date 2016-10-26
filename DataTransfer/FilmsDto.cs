@@ -10,7 +10,7 @@ namespace DataTransfer
     [XmlRoot("Films")]
     public class FilmsDto
     {
-        [XmlArray("FilmSerie")]
+        [XmlArray("FilmSeries"), XmlArrayItem("FilmSerie")]
         public List<FilmSeriesDto> FilmSeries { get; set; }
     }
 }
