@@ -34,3 +34,9 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\AsistentoDelProyecto.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\log4net.dll
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\log4net.xml
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\DataAcces.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\Domain.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\DataTransfer.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\DataAcces.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\Domain.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\DataTransfer.pdb

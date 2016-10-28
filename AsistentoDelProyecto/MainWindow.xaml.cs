@@ -6,6 +6,9 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 using Hardcodet.Wpf.TaskbarNotification;
+using log4net;
+using log4net.Config;
+using Domain.Services;
 
 namespace AsistentoDelProyecto
 {
@@ -14,6 +17,8 @@ namespace AsistentoDelProyecto
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(MainWindow));
+        private FilmService _filmService;
         public MainWindow()
         {
             InicializeWindow();
@@ -23,6 +28,10 @@ namespace AsistentoDelProyecto
                 
         private void InicializeWindow()
         {
+            XmlConfigurator.Configure();
+            _filmService = new FilmService();
+            _filmService.LoadData();
+            Log.Info(_filmService.IsDirty());
             InitializeComponent();
         }
 

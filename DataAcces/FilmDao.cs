@@ -34,7 +34,7 @@ namespace DataAcces
             }
             catch (Exception e)
             {
-                Log.Debug($"Error occured while loading data {e}");
+                Log.Error($"Error occured while loading data {e}");
                 throw;
             }    
         }

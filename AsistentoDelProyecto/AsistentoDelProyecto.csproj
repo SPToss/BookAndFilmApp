@@ -109,6 +109,16 @@
   <ItemGroup>
     <Resource Include="Resources\TrayIcon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAcces\DataAcces.csproj">
+      <Project>{15b12ceb-3d11-4b36-b563-9a935534db76}</Project>
+      <Name>DataAcces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{d25769cc-2bf3-4490-aa41-3a390da28267}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
