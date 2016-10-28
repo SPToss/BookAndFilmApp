@@ -10,3 +10,5 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\bin\Debug\DataTransfer.dll
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\bin\Debug\DataAcces.pdb
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\bin\Debug\DataTransfer.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\bin\Debug\Domain.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DebugConsole\bin\Debug\Domain.pdb

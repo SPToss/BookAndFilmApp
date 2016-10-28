@@ -5,3 +5,5 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataAcces\obj\Debug\DataAcces.csprojResolveAssemblyReference.cache
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataAcces\bin\Debug\log4net.dll
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataAcces\bin\Debug\log4net.xml
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataAcces\bin\Debug\DataTransfer.dll
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\DataAcces\bin\Debug\DataTransfer.pdb

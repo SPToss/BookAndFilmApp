@@ -63,6 +63,10 @@
       <Project>{3153ee82-e8ad-4d3a-9d0b-5484b3b0f6fb}</Project>
       <Name>DataTransfer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{d25769cc-2bf3-4490-aa41-3a390da28267}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

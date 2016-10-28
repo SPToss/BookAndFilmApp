@@ -1,23 +1,35 @@
 ﻿using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using log4net;
+using System;
 
 namespace DataAcces
 {
     public static class XmlHelper
     {
-        public static T Deserialize<T> (XElement element)
+        private static readonly ILog Log = LogManager.GetLogger(typeof(FilmDao));
+        public static T Deserialize<T> (XElement element) where T : new()
         {
-            var serializer = new XmlSerializer(typeof(T));
-            return (T)serializer.Deserialize(element.CreateReader());
+            T result = new T();
+            try
+            {
+                var serializer = new XmlSerializer(typeof(T));
+                result = (T)serializer.Deserialize(element.CreateReader());
+            }
+            catch(Exception e)
+            {
+                Log.Error($"Error occured while deserialize {element} to type {typeof(T)} : {e}");
+            }
+            return result;
         }
-        public static XElement SerializeToXElement(object o)
+        public static XElement SerializeToXElement<T>(T t)
         {
             var doc = new XDocument();
             using (XmlWriter writer = doc.CreateWriter())
             {
-                XmlSerializer serializer = new XmlSerializer(o.GetType());
-                serializer.Serialize(writer, o);
+                XmlSerializer serializer = new XmlSerializer(typeof(T));
+                serializer.Serialize(writer, t);
             }
             return doc.Root;
         }
