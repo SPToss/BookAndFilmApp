@@ -21,6 +21,7 @@ namespace AsistentoDelProyecto
         private FilmService _filmService;
         public MainWindow()
         {
+            Log.Info("Started main App Window");
             InicializeWindow();
 
             taskbarIcon.TrayMouseDoubleClick += new RoutedEventHandler(OnTrayMouseDoubleClick);            
