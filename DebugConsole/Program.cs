@@ -18,9 +18,6 @@ namespace DebugConsole
         static void Main(string[] args)
         {
             XmlConfigurator.Configure();
-            FilmService service = new FilmService();
-
-            service.LoadData();
         }
     }
 }

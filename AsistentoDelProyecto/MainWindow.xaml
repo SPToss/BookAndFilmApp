@@ -20,7 +20,7 @@
                 </MenuItem>
             </Menu>
             <StackPanel>
-                <Expander x:Name="expander" Header="Expander" Width="172" RenderTransformOrigin="0.5,0.5">
+                <Expander x:Name="expander" Header="Films" Width="172" RenderTransformOrigin="0.5,0.5">
                     <Expander.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -29,7 +29,7 @@
                             <TranslateTransform X="-270"/>
                         </TransformGroup>
                     </Expander.RenderTransform>
-                    <Button x:Name="filmsButton" Content="Button" Width="75"/>
+                    <Button BorderThickness="0"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Name="newFilmButton" Content="New" Width="66" Margin="25,0,78.6,0"/>
                 </Expander>
             </StackPanel>
         </DockPanel>

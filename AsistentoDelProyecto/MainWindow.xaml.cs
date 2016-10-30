@@ -26,16 +26,17 @@ namespace AsistentoDelProyecto
             Log.Info("Started main App Window");
             InicializeWindow();
 
-            taskbarIcon.TrayMouseDoubleClick += new RoutedEventHandler(OnTrayMouseDoubleClick);            
+
         }
-                
+
         private void InicializeWindow()
         {
             XmlConfigurator.Configure();
             InitializeComponent();
+            EventHendlers();
             _filmService = new FilmService(Settings.Default.FilmFilePath);
-            filmsButton.Content = $"Films: {_filmService.GetAllItemsCount()}";
-            
+            expander.Header = $"Films: {_filmService.GetAllItemsCount()}";
+
         }
 
         protected override void OnStateChanged(EventArgs e)
@@ -49,7 +50,7 @@ namespace AsistentoDelProyecto
             {
                 taskbarIcon.Visibility = Visibility.Hidden;
             }
-            
+
             base.OnStateChanged(e);
         }
 
@@ -57,6 +58,11 @@ namespace AsistentoDelProyecto
         {
             this.Show();
             this.WindowState = WindowState.Normal;
+        }
+
+        private void EventHendlers()
+        {
+            taskbarIcon.TrayMouseDoubleClick += OnTrayMouseDoubleClick;
         }
     }
 }
