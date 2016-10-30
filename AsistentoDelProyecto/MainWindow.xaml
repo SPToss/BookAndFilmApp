@@ -13,5 +13,27 @@
                         ToolTipText="Asistent"  
                         Visibility="Hidden" >
         </tb:TaskbarIcon>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File" Height="18">
+                    <MenuItem Header="_Save"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel>
+                <Expander x:Name="expander" Header="Expander" Width="172" RenderTransformOrigin="0.5,0.5">
+                    <Expander.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-270"/>
+                        </TransformGroup>
+                    </Expander.RenderTransform>
+                    <Button x:Name="filmsButton" Content="Button" Width="75"/>
+                </Expander>
+            </StackPanel>
+        </DockPanel>
     </Grid>
+
 </Window>
+    

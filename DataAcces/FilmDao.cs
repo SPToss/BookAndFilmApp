@@ -23,13 +23,13 @@ namespace DataAcces
             }
         }
 
-        public FilmsDto LoadFilms()
+        public FilmsDto LoadFilms(string path)
         {
             try
             {
-                var root = XElement.Load("E:\\Films.xml");
+                var root = XElement.Load(@path);
                 var result = XmlHelper.Deserialize<FilmsDto>(root);
-                Log.Debug($"Loaded {result}");
+                Log.Debug($"Loaded {result} form {path}");
                 return result;
             }
             catch (Exception e)

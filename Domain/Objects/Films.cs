@@ -19,6 +19,12 @@ namespace Domain.Objects
                 FilmSeries = dto.FilmSeries.ConvertAll(x => FilmSerie.FromDto(x))
             };
         }
+
+        public int CountAllElements()
+        {
+            return FilmSeries.Sum(x => x.GetFilmsCount());
+        }
+
         public bool IsDirty()
         {
             return FilmSeries.Any(x => x.IsDirty());

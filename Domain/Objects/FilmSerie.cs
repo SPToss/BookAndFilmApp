@@ -44,5 +44,10 @@ namespace Domain.Objects
                 Films = dto.Films.ConvertAll(x => Film.FromDto(x))
             };
         }
+
+        public int GetFilmsCount()
+        {
+            return Films.Count();
+        }
     }
 }

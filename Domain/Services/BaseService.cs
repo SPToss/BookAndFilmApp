@@ -11,12 +11,17 @@ namespace Domain.Services
     public abstract class BaseService<T>  where T : IDataObject, new()
     {
         protected T Item;
+        protected string filePath;
+        protected BaseService(string file) : this(new T(),file)
+        {
+            filePath = file;
+            LoadData();       
+        }
 
-        protected BaseService() : this(new T()) { }
-
-        public BaseService(T item)
+        public BaseService(T item, string file)
         {
             Item = item;
+            filePath = file;
         }
 
         public abstract void LoadData();
@@ -24,6 +29,11 @@ namespace Domain.Services
         public bool IsDirty()
         {
             return Item.IsDirty();
+        }
+
+        public int GetAllItemsCount()
+        {
+            return Item.CountAllElements();
         }
     }
 }

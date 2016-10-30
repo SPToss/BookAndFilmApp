@@ -9,6 +9,8 @@ using Hardcodet.Wpf.TaskbarNotification;
 using log4net;
 using log4net.Config;
 using Domain.Services;
+using AsistentoDelProyecto.Properties;
+using System.Windows.Controls;
 
 namespace AsistentoDelProyecto
 {
@@ -30,10 +32,10 @@ namespace AsistentoDelProyecto
         private void InicializeWindow()
         {
             XmlConfigurator.Configure();
-            _filmService = new FilmService();
-            _filmService.LoadData();
-            Log.Info(_filmService.IsDirty());
             InitializeComponent();
+            _filmService = new FilmService(Settings.Default.FilmFilePath);
+            filmsButton.Content = $"Films: {_filmService.GetAllItemsCount()}";
+            
         }
 
         protected override void OnStateChanged(EventArgs e)

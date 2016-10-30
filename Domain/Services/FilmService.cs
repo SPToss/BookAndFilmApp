@@ -13,15 +13,15 @@ namespace Domain.Services
     public class FilmService : BaseService<Films>
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(FilmService));
-        public FilmService() : base() { }
+        public FilmService(string file) : base(file) { }
 
-        public FilmService(Films films) : base(films) { }
+        public FilmService(Films films,string file) : base(films,file) { }
 
         public override void LoadData()
         {
             Log.Debug("Atempt to load data for FilmService");
             var dao = new FilmDao();
-            Item = Films.FormDto(dao.LoadFilms());
+            Item = Films.FormDto(dao.LoadFilms(filePath));
         }
     }
 }
