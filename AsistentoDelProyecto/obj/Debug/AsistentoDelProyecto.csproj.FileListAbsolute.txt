@@ -40,3 +40,5 @@ C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\Bo
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\DataAcces.pdb
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\Domain.pdb
 C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\bin\Debug\DataTransfer.pdb
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\Views\FilmAdd.g.cs
+C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\AsistentoDelProyecto\obj\Debug\Views\FilmAdd.baml

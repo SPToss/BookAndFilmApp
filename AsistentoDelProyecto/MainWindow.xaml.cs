@@ -11,6 +11,7 @@ using log4net.Config;
 using Domain.Services;
 using AsistentoDelProyecto.Properties;
 using System.Windows.Controls;
+using AsistentoDelProyecto.Views;
 
 namespace AsistentoDelProyecto
 {
@@ -63,6 +64,14 @@ namespace AsistentoDelProyecto
         private void EventHendlers()
         {
             taskbarIcon.TrayMouseDoubleClick += OnTrayMouseDoubleClick;
+            newFilmButton.Click += NewFilmButton_Click;
+        }
+
+        private void NewFilmButton_Click(object sender, RoutedEventArgs e)
+        {
+            Log.Info("New Film Button clicked");
+            FilmAdd filmAdd = new FilmAdd(_filmService);
+            filmAdd.ShowDialog();
         }
     }
 }
