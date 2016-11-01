@@ -1,1 +1,0 @@
-C:\Users\Sebastian\Documents\Visual Studio 2015\Projects\AsistentoDelProyecto\BookAndFilmApp\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
