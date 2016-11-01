@@ -26,8 +26,6 @@ namespace AsistentoDelProyecto
         {
             Log.Info("Started main App Window");
             InicializeWindow();
-
-
         }
 
         private void InicializeWindow()
@@ -71,7 +69,13 @@ namespace AsistentoDelProyecto
         {
             Log.Info("New Film Button clicked");
             FilmAdd filmAdd = new FilmAdd(_filmService);
+            filmAdd.Closed += FilmAdd_Closed;
             filmAdd.ShowDialog();
+        }
+
+        private void FilmAdd_Closed(object sender, EventArgs e)
+        {
+            expander.Header = $"Films: {_filmService.GetAllItemsCount()}";
         }
     }
 }

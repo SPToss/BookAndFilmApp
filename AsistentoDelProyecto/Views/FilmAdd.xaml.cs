@@ -30,7 +30,9 @@ namespace AsistentoDelProyecto.Views
             _service = service;
             EventHendlers();
             statustComboBox.ItemsSource = Enum.GetValues(typeof(FilmStatus)).Cast<FilmStatus>();
+            statustComboBox.SelectedIndex = 0;
             soundTrackCombomox.ItemsSource = Enum.GetValues(typeof(FilmSoundTrack)).Cast<FilmSoundTrack>();
+            soundTrackCombomox.SelectedIndex = 0;
             Log.Info("Inicialized Add Film window");
         }
 
@@ -40,8 +42,37 @@ namespace AsistentoDelProyecto.Views
             addButon.Click += AddButon_Click;
         }
 
+        private bool ValidateInput()
+        {
+            bool result = true;
+            if (string.IsNullOrWhiteSpace(filmNameTextBox.Text) || filmNameTextBox.Text == "FilmName")
+            {
+                result = false;
+                filmNameTextBox.BorderBrush = Brushes.Red;
+            }
+            if (string.IsNullOrWhiteSpace(filmGenersTextBox.Text) || filmGenersTextBox.Text == "Geners")
+            {
+                result = false;
+                filmGenersTextBox.BorderBrush = Brushes.Red;
+            }
+            if (string.IsNullOrWhiteSpace(filmTypeTextBox.Text) || filmTypeTextBox.Text == "Type")
+            {
+                result = false;
+                filmTypeTextBox.BorderBrush = Brushes.Red;
+            }
+            return result;
+        }
+
+        private void RestoreBorderChange()
+        {
+            filmNameTextBox.ClearValue(BorderBrushProperty);
+            filmGenersTextBox.ClearValue(BorderBrushProperty);
+            filmTypeTextBox.ClearValue(BorderBrushProperty);
+        }
+
         private void AddButon_Click(object sender, RoutedEventArgs e)
         {
+
             RestoreBorderChange();
             if (!ValidateInput())
             {
@@ -53,22 +84,6 @@ namespace AsistentoDelProyecto.Views
         {
             Log.Info("Closing Add Film window");
             this.Close();
-        }
-
-        private bool ValidateInput()
-        {
-            bool result = true;
-            if(string.IsNullOrWhiteSpace(filmNameTextBox.Text) || filmNameTextBox.Text == "FilmName")
-            {
-                result = false;
-                filmNameTextBox.BorderBrush = Brushes.Red;
-            }
-            return result;
-        }
-
-        private void RestoreBorderChange()
-        {
-            filmNameTextBox.ClearValue(BorderBrushProperty);
         }
     }
 }
