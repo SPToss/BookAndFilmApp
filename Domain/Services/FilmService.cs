@@ -23,5 +23,28 @@ namespace Domain.Services
             var dao = new FilmDao();
             Item = Films.FormDto(dao.LoadFilms(filePath));
         }
+        public override void SaveData()
+        {
+
+        }
+        public bool CHeckForSerie(string serieName)
+        {
+            return Item.CheckForSerie(serieName);
+        }
+
+        public bool CheckForFilmInSerie(string serieName, Film film)
+        {
+            return Item.CheckForFilmInSerie(serieName, film);
+        }
+
+        public void AddFilmToSerie(string serieName, Film film)
+        {
+            Item.AddFilmToSerie(serieName, film);
+        }
+
+        public void AddSerie(FilmSerie filmSerie)
+        {
+            Item.AddSerie(filmSerie);
+        }
     }
 }

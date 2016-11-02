@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using log4net;
 using DataTransfer;
+using Domain.Objects;
 
 namespace AsistentoDelProyecto.Views
 {
@@ -72,11 +73,25 @@ namespace AsistentoDelProyecto.Views
 
         private void AddButon_Click(object sender, RoutedEventArgs e)
         {
-
+            _service.AddSerie(new FilmSerie
+            {
+                Name = "Undefided",
+                Category = "Undefided",
+                Films = new List<Film>()
+            });
+            
             RestoreBorderChange();
             if (!ValidateInput())
             {
                 MessageBoxResult result = MessageBox.Show("Validation failed\nCorrect fields highlighted red", "Validation", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                var filmSerie = BuildFilmSerie();
+                if (!_service.CheckForFilmInSerie(filmSerie.Name, filmSerie.Films.FirstOrDefault()))
+                {
+                    _service.AddFilmToSerie(filmSerie.Name, filmSerie.Films.FirstOrDefault());
+                }
             }
         }
 
@@ -84,6 +99,29 @@ namespace AsistentoDelProyecto.Views
         {
             Log.Info("Closing Add Film window");
             this.Close();
+        }
+
+        private FilmSerie BuildFilmSerie()
+        {
+            return new FilmSerie
+            {
+                Name = "Undefided",
+                Category = "Undefided",
+                Films = new List<Film>
+                {
+                    new Film
+                    {
+                        Distribution = filmDistributionTextBox.Text,
+                        FilmStatus = (FilmStatus)Enum.Parse(typeof(FilmStatus), statustComboBox.Text, true),
+                        Genres = filmGenersTextBox.Text,
+                        ProductionCompany = filmProductionCompanyTextBox.Text,
+                        ReliseYear = filmDataPicker.Text,
+                        SoundTrack =(FilmSoundTrack)Enum.Parse(typeof(FilmSoundTrack), soundTrackCombomox.Text, true),
+                        Title = filmNameTextBox.Text,
+                        Type = filmTypeTextBox.Text
+                    }
+                }
+            };
         }
     }
 }

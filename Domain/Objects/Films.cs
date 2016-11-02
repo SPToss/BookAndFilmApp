@@ -20,6 +20,26 @@ namespace Domain.Objects
             };
         }
 
+        public void AddSerie(FilmSerie filmSerie)
+        {
+            FilmSeries.Add(filmSerie);
+        }
+
+        public void AddFilmToSerie(string serieName, Film film)
+        {
+            FilmSeries.FirstOrDefault(x => x.Name == serieName).AddFilm(film);
+        }
+
+        public bool CheckForSerie(string serieName)
+        {
+            return FilmSeries.Any(x => x.Name == serieName);
+        }
+
+        public bool CheckForFilmInSerie(string serieName, Film film)
+        {
+            return FilmSeries.Any(x => x.Name == serieName && x.CheckForFilm(film));
+        }
+
         public int CountAllElements()
         {
             return FilmSeries.Sum(x => x.GetFilmsCount());

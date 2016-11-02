@@ -35,6 +35,16 @@ namespace Domain.Objects
             return false;
         }
 
+        public bool CheckForFilm(Film film)
+        {
+            return Films.Any(x => x.Equals(film));
+        }
+
+        public void AddFilm(Film film)
+        {
+            Films.Add(film);
+        }
+
         public static FilmSerie FromDto(FilmSeriesDto dto)
         {
             return new FilmSerie

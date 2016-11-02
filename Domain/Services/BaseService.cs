@@ -26,6 +26,8 @@ namespace Domain.Services
 
         public abstract void LoadData();
 
+        public abstract void SaveData();
+
         public bool IsDirty()
         {
             return Item.IsDirty();
