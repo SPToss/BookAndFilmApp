@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsistentoDelProyecto.Views"
         mc:Ignorable="d"
-        Title="FilmAdd" Height="400" Width="310">
+        Title="FilmAdd" Height="430" Width="310">
     <Grid>
-        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="209,326,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="209,357,0,0" VerticalAlignment="Top" Width="75"/>
         <TextBox x:Name="filmNameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="FilmName" VerticalAlignment="Top" Width="274"/>
         <TextBox x:Name="filmDistributionTextBox" HorizontalAlignment="Left" Height="23" Margin="10,47,0,0" TextWrapping="Wrap" Text="Distribution" VerticalAlignment="Top" Width="274"/>
         <TextBox x:Name="filmProductionCompanyTextBox" HorizontalAlignment="Left" Height="23" Margin="10,84,0,0" TextWrapping="Wrap" Text="Production Company" VerticalAlignment="Top" Width="274"/>
@@ -16,6 +16,8 @@
         <DatePicker x:Name="filmDataPicker" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="274"/>
         <ComboBox x:Name="statustComboBox" Text="Status"  HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" Width="274"/>
         <ComboBox x:Name="soundTrackCombomox" Text="Sound Track" HorizontalAlignment="Left" Margin="10,269,0,0" VerticalAlignment="Top" Width="274"/>
-        <Button x:Name="addButon" Content="Add" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="addButon" Content="Add" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="categoryCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="224" Margin="10,308,0,0"/>
+        <Button x:Name="newCategoryButton" Content="Button" HorizontalAlignment="Left" Margin="239,308,0,0" VerticalAlignment="Top" Width="45"/>
     </Grid>
 </Window>

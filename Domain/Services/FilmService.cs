@@ -25,7 +25,9 @@ namespace Domain.Services
         }
         public override void SaveData()
         {
-
+            Log.Debug("Atempt to save data for FilmService");
+            var dao = new FilmDao();
+            dao.SaveFilms(Item.ToDto());
         }
         public bool CHeckForSerie(string serieName)
         {
@@ -40,6 +42,16 @@ namespace Domain.Services
         public void AddFilmToSerie(string serieName, Film film)
         {
             Item.AddFilmToSerie(serieName, film);
+        }
+
+        public FilmSerie GetSerieByName(string serieName)
+        {
+            return Item.GetSerieByName(serieName);
+        }
+
+        public List<string> GetAllFilmSerieNmes()
+        {
+            return Item.GetAllSeriesName();
         }
 
         public void AddSerie(FilmSerie filmSerie)

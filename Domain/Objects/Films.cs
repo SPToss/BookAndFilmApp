@@ -20,6 +20,28 @@ namespace Domain.Objects
             };
         }
 
+        public FilmsDto ToDto()
+        {
+            return new FilmsDto
+            {
+                FilmSeries = FilmSeries.ConvertAll(x => x.ToDto())
+            };
+        }
+
+        public List<string> GetAllSeriesName()
+        {
+            return FilmSeries.Select(x => x.Name).ToList();
+        }
+
+        public FilmSerie GetSerieByName(string serieName)
+        {
+            if (!CheckForSerie(serieName))
+            {
+                return new FilmSerie();
+            }
+            return FilmSeries.First(x => x.Name == serieName);
+        }
+
         public void AddSerie(FilmSerie filmSerie)
         {
             FilmSeries.Add(filmSerie);

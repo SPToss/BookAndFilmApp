@@ -63,6 +63,12 @@ namespace AsistentoDelProyecto
         {
             taskbarIcon.TrayMouseDoubleClick += OnTrayMouseDoubleClick;
             newFilmButton.Click += NewFilmButton_Click;
+            SaveBut.Click += SaveBut_Click;
+        }
+
+        private void SaveBut_Click(object sender, RoutedEventArgs e)
+        {
+            _filmService.SaveData();
         }
 
         private void NewFilmButton_Click(object sender, RoutedEventArgs e)
@@ -76,6 +82,10 @@ namespace AsistentoDelProyecto
         private void FilmAdd_Closed(object sender, EventArgs e)
         {
             expander.Header = $"Films: {_filmService.GetAllItemsCount()}";
+            if (_filmService.IsDirty())
+            {
+                expander.Header += "*";
+            }
         }
     }
 }

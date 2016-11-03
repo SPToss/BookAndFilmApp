@@ -16,7 +16,7 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File" Height="18">
-                    <MenuItem Header="_Save"/>
+                    <MenuItem x:Name="SaveBut" Header="_Save"/>
                 </MenuItem>
             </Menu>
             <StackPanel>

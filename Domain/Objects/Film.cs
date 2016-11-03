@@ -78,6 +78,21 @@ namespace Domain.Objects
             };
         }
 
+        public FilmDto ToDto()
+        {
+            return new FilmDto
+            {
+                Distribution = Distribution,
+                Genres = Genres,
+                ProductionCompany = ProductionCompany,
+                ReliseYear = ReliseYear,
+                SoundTrack = SoundTrack,
+                Status = FilmStatus,
+                Title = Title,
+                Type = Type
+            };
+        }
+
         public override string ToString()
         {
             return $"{Title} ({ReliseYear}) by : {Distribution}";

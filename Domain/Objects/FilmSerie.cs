@@ -3,8 +3,6 @@ using Domain.Objects.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Objects
 {
@@ -51,7 +49,17 @@ namespace Domain.Objects
             {
                 Category = dto.Category,
                 Name = dto.Name,
-                Films = dto.Films.ConvertAll(x => Film.FromDto(x))
+                Films = dto.Films.ConvertAll(Film.FromDto)
+            };
+        }
+
+        public FilmSeriesDto ToDto()
+        {
+            return new FilmSeriesDto
+            {
+                Category = Category,
+                Films = Films.ConvertAll(x => x.ToDto()),
+                Name = Name
             };
         }
 

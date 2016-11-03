@@ -34,6 +34,7 @@ namespace AsistentoDelProyecto.Views
             statustComboBox.SelectedIndex = 0;
             soundTrackCombomox.ItemsSource = Enum.GetValues(typeof(FilmSoundTrack)).Cast<FilmSoundTrack>();
             soundTrackCombomox.SelectedIndex = 0;
+            categoryCombo.ItemsSource = _service.GetAllFilmSerieNmes();
             Log.Info("Inicialized Add Film window");
         }
 
@@ -61,6 +62,11 @@ namespace AsistentoDelProyecto.Views
                 result = false;
                 filmTypeTextBox.BorderBrush = Brushes.Red;
             }
+            if (string.IsNullOrWhiteSpace(categoryCombo.Text))
+            {
+                result = false;
+                categoryCombo.BorderBrush = Brushes.Red;
+            }
             return result;
         }
 
@@ -69,17 +75,12 @@ namespace AsistentoDelProyecto.Views
             filmNameTextBox.ClearValue(BorderBrushProperty);
             filmGenersTextBox.ClearValue(BorderBrushProperty);
             filmTypeTextBox.ClearValue(BorderBrushProperty);
+            categoryCombo.ClearValue(BorderBrushProperty);
         }
 
         private void AddButon_Click(object sender, RoutedEventArgs e)
         {
-            _service.AddSerie(new FilmSerie
-            {
-                Name = "Undefided",
-                Category = "Undefided",
-                Films = new List<Film>()
-            });
-            
+            bool added = false;
             RestoreBorderChange();
             if (!ValidateInput())
             {
@@ -87,11 +88,21 @@ namespace AsistentoDelProyecto.Views
             }
             else
             {
-                var filmSerie = BuildFilmSerie();
-                if (!_service.CheckForFilmInSerie(filmSerie.Name, filmSerie.Films.FirstOrDefault()))
+                var film = BuildFilmSerie();
+                var filmSerie = _service.GetSerieByName(categoryCombo.Text);
+                if (!filmSerie.CheckForFilm(film))
                 {
-                    _service.AddFilmToSerie(filmSerie.Name, filmSerie.Films.FirstOrDefault());
+                    _service.AddFilmToSerie(filmSerie.Name, film);
+                    added = true;
                 }
+                else
+                {
+                    MessageBoxResult result = MessageBox.Show("Validation failed\nThis film is already in base", "Validation", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            if (added)
+            {
+                this.Close();
             }
         }
 
@@ -101,26 +112,18 @@ namespace AsistentoDelProyecto.Views
             this.Close();
         }
 
-        private FilmSerie BuildFilmSerie()
-        {
-            return new FilmSerie
+        private Film BuildFilmSerie()
+        {  
+            return new Film
             {
-                Name = "Undefided",
-                Category = "Undefided",
-                Films = new List<Film>
-                {
-                    new Film
-                    {
-                        Distribution = filmDistributionTextBox.Text,
-                        FilmStatus = (FilmStatus)Enum.Parse(typeof(FilmStatus), statustComboBox.Text, true),
-                        Genres = filmGenersTextBox.Text,
-                        ProductionCompany = filmProductionCompanyTextBox.Text,
-                        ReliseYear = filmDataPicker.Text,
-                        SoundTrack =(FilmSoundTrack)Enum.Parse(typeof(FilmSoundTrack), soundTrackCombomox.Text, true),
-                        Title = filmNameTextBox.Text,
-                        Type = filmTypeTextBox.Text
-                    }
-                }
+                Distribution = filmDistributionTextBox.Text,
+                FilmStatus = (FilmStatus)Enum.Parse(typeof(FilmStatus), statustComboBox.Text, true),
+                Genres = filmGenersTextBox.Text,
+                ProductionCompany = filmProductionCompanyTextBox.Text,
+                ReliseYear = filmDataPicker.Text,
+                SoundTrack = (FilmSoundTrack)Enum.Parse(typeof(FilmSoundTrack), soundTrackCombomox.Text, true),
+                Title = filmNameTextBox.Text,
+                Type = filmTypeTextBox.Text
             };
         }
     }
