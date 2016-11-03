@@ -60,6 +60,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DomainTest\FilmServiceTest.cs" />
+    <Compile Include="DomainTest\FilmServiceTestBase.cs" />
     <Compile Include="DomainTest\FilmTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
